@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id"> 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Notifikasi</title>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-messaging-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; background: #f9f9f9; }
+    h1 { color: #333; }
+    button { padding: 10px 15px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>📨 Push Notifikasi Siap !</h1>
+  <p>Token Anda akan muncul di console browser.</p>
+  <button onclick="requestPermission()">Aktifkan Notifikasi</button>
+  <button onclick="logout()">Logout</button>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCyTTBxSaP9moBFvd9x1QSzw37Vp55ftyI",
+      authDomain: "bendhard16-d0262.firebaseapp.com",
+      projectId: "bendhard16-d0262",
+      storageBucket: "bendhard16-d0262.firebasestorage.app",
+      messagingSenderId: "379521421845",
+      appId: "1:379521421845:web:fa5eba120e8cf1b332b41c",
+      measurementId: "G-PEB8LEGVG3"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const messaging = firebase.messaging();
+    const auth = firebase.auth();
+
+    auth.onAuthStateChanged(function(user) {
+      if (!user) {
+        window.location.href = "login.html";
+      } else {
+        console.log("Login sebagai:", user.displayName);
+      }
+    });
+
+    async function requestPermission() {
+      try {
+        const token = await messaging.getToken({
+          vapidKey: "BPZ4rk0LGHpA8N77U2UjXrUDTI_mzH_cYpgm5t88nnGkkijqKuRuidyxtuyzAibWpjE_9n2v7hRVcarvMzS3T8E"
+        });
+        console.log("Token FCM:", token);
+        alert("Token ditampilkan di console!");
+      } catch (err) {
+        console.error("Token Error:", err);
+      }
+    }
+
+    messaging.onMessage((payload) => {
+      console.log("Notifikasi aktif:", payload);
+      alert("Notifikasi: " + payload.notification.title);
+    });
+
+    function logout() {
+      auth.signOut().then(() => {
+        window.location.href = "login.html";
+      });
+    }
+  </script>
+  <script src="main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/1.0.2/ua-parser.min.js"></script>
+  <script>
+      const parser = new UAParser();
+      const result = parser.getResult();
+      console.log(result.device); // { model: "Galaxy A10s", vendor: "Samsung", type: "mobile" }
+  </script>
+
+</body>
+</html>

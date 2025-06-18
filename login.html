@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Login dengan Google</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+    h2 {
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+    .google-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: white;
+      color: #444;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .google-icon {
+      width: 20px;
+      height: 20px;
+    }
+    #status {
+      margin-top: 1rem;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Masuk dengan Google</h2>
+    <button class="google-btn" onclick="loginWithGoogle()">
+      <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" class="google-icon" />
+      Masuk dengan Google
+    </button>
+    <p id="status"></p>
+  </div>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCyTTBxSaP9moBFvd9x1QSzw37Vp55ftyI",
+      authDomain: "bendhard16-d0262.firebaseapp.com",
+      projectId: "bendhard16-d0262",
+      storageBucket: "bendhard16-d0262.firebasestorage.app",
+      messagingSenderId: "379521421845",
+      appId: "1:379521421845:web:fa5eba120e8cf1b332b41c",
+      measurementId: "G-PEB8LEGVG3"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    async function loginWithGoogle() {
+      try {
+        const provider = new firebase.auth.GoogleAuthProvider();
+        const result = await auth.signInWithPopup(provider);
+        document.getElementById("status").innerText = `Selamat datang, ${result.user.displayName}`;
+        console.log(result.user)
+        /*(() => {
+          window.location.href = "index.html";
+        }, 1500);*/
+      } catch (error) {
+        document.getElementById("status").innerText = "Login gagal";
+      }
+    }
+  </script>
+</body>
+</html>
