@@ -1,0 +1,2598 @@
+                                                                                                                                                        
+
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Sales Control</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/font/fontawesome/css/all.css">
+</head>
+
+<body>
+    <header class="flex-beetwen p-15 nav fixed">
+        <h3 class="m-0 p-0 clr-white">Sales Control</h3>
+        <div class="nav-button relative" id="nav-button">
+            <div class="nav-line ln1"></div>
+            <div class="nav-line ln2"></div>
+            <div class="nav-line ln3"></div>
+        </div>
+        <nav class="nav-menu hidden">
+            <div class="blob"></div>
+            <div class="nav-link active" data-target ="home">Home</div>
+            <div class="nav-link" data-target ="add">Add</div>
+            <div class="nav-link" data-target ="sales-card">Sales Card</div>
+            <div class="nav-link" data-target ="after-sales">After Sales</div>
+            <div class="nav-link" data-target ="settings">Settings</div>
+        </nav>
+    </header>
+    
+    <div class="main-bg fixed-top-left vh-100 vw-100">
+        <div class="wave-box default flex-end flex-column">
+            <div class="wave-content">
+                <!--Waves Container-->
+                <svg class="waves relative w-100 h-100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="#efefef70" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="#efefef50" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="#efefef30" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#efefef" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+                
+    <div class="content-top"></div>
+    
+    <div id="home" class="content p-15">
+        <div class="home-top clr-white flex-beetwen">
+            <div class="h-top-left">
+                <h1 class="m-0 p-0">A0003</h1>
+                <span class="fz-12">Esok, OFF</span>
+            </div>
+            <div class="h-top-right align-right">
+                <span class="fz-12">Sabtu, 31 Mei 2025</span>
+                <h2 class="m-0 p-0">12 . 50 . 02</h2>
+            </div>
+        </div>
+        
+        <div class="hr white"></div>
+        
+        <h3 class="clr-white">Monthly Diagram</h3>
+        <div class="diagram-box relative hidden borad-10 pb-5 pt-3 w-100 vh-50">
+            <i class="diagram-control fas fa-cog fa-spin clr-yellow absolute-right absolute-top" data-target="monthly-diagram"></i>
+            <div class="all-diagram pl-20 relative w-100 h-100" id="monthly-diagram">
+                <div class="diagram-bg h-100 w-100 absolute-top clr-white fz-12 flex-beetwen flex-column items-start">
+                    <div class="diag-bg-line"><span>100</span></div>
+                    <div class="diag-bg-line"><span>75</span></div>
+                    <div class="diag-bg-line"><span>50</span></div>
+                    <div class="diag-bg-line"><span>25</span></div>
+                    <div class="diag-bg-line no-border"><span>0</span></div>
+                </div>
+                <div class="diagram-bar flex-beetwen gap-5 ph-10 h-100 w-100 uppercase">
+                    <div class="diag-bar-box h-100 w-100 relative bolder" data-bar="main">
+                        <div class="diag-back absolute-bottom w-100 yellow" style="height: 90% !important;">
+                            <span class="diag-gap w-100 clr-yellow align-center fz-12">+20.6M</span>
+                        </div>
+                        <span class="diag-front absolute-bottom w-100 default" style="height: 70% !important;"></span>
+                        <span class="diag-value absolute-top w-100 clr-white align-center fz-12">133.5M</span>
+                        <span class="diag-type absolute-top w-100 default align-center fz-10 p-3 borad-3">MAIN</span>
+                    </div>
+                    <div class="diag-bar-box h-100 w-100 relative bolder" data-bar="ftr">
+                        <div class="diag-back absolute-bottom w-100 yellow" style="height: 90% !important;">
+                            <span class="diag-gap w-100 clr-yellow align-center fz-12">+20.6M</span>
+                        </div>
+                        <span class="diag-front absolute-bottom w-100 default" style="height: 70% !important;"></span>
+                        <span class="diag-value absolute-top w-100 clr-white align-center fz-12">133.5M</span>
+                        <span class="diag-type absolute-top w-100 default align-center fz-10 p-3 borad-3">FTR</span>
+                    </div>
+                    <div class="diag-bar-box h-100 w-100 relative bolder" data-bar="acc">
+                        <div class="diag-back absolute-bottom w-100 yellow" style="height: 90% !important;">
+                            <span class="diag-gap w-100 clr-yellow align-center fz-12">+20.6M</span>
+                        </div>
+                        <span class="diag-front absolute-bottom w-100 default" style="height: 70% !important;"></span>
+                        <span class="diag-value absolute-top w-100 clr-white align-center fz-12">133.5M</span>
+                        <span class="diag-type absolute-top w-100 default align-center fz-10 p-3 borad-3">ACC</span>
+                    </div>
+                    <div class="diag-bar-box h-100 w-100 relative bolder dis-none" data-bar="fpvalue">
+                        <div class="diag-back absolute-bottom w-100 yellow" style="height: 90% !important;">
+                            <span class="diag-gap w-100 clr-yellow align-center fz-12">+20.6M</span>
+                        </div>
+                        <span class="diag-front absolute-bottom w-100 default" style="height: 70% !important;"></span>
+                        <span class="diag-value absolute-top w-100 clr-white align-center fz-12">133.5M</span>
+                        <span class="diag-type absolute-top w-100 default align-center fz-10 p-3 borad-3">FP</span>
+                    </div>
+                    <div class="diag-bar-box h-100 w-100 relative bolder" data-bar="fpqty">
+                        <div class="diag-back absolute-bottom w-100 yellow" style="height: 90% !important;">
+                            <span class="diag-gap w-100 clr-yellow align-center fz-12">+20.6M</span>
+                        </div>
+                        <span class="diag-front absolute-bottom w-100 default" style="height: 70% !important;"></span>
+                        <span class="diag-value absolute-top w-100 clr-white align-center fz-12">133.5M</span>
+                        <span class="diag-type absolute-top w-100 default align-center fz-10 p-3 borad-3">comser</span>
+                    </div>
+                    <div class="diag-bar-box h-100 w-100 relative bolder" data-bar="comservalue">
+                        <div class="diag-back absolute-bottom w-100 yellow" style="height: 90% !important;">
+                            <span class="diag-gap w-100 clr-yellow align-center fz-12">+20.6M</span>
+                        </div>
+                        <span class="diag-front absolute-bottom w-100 default" style="height: 70% !important;"></span>
+                        <span class="diag-value absolute-top w-100 clr-white align-center fz-12">133.5M</span>
+                        <span class="diag-type absolute-top w-100 default align-center fz-10 p-3 borad-3">FP</span>
+                    </div>
+                    <div class="diag-bar-box h-100 w-100 relative bolder dis-none" data-bar="comserqty">
+                        <div class="diag-back absolute-bottom w-100 yellow" style="height: 90% !important;">
+                            <span class="diag-gap w-100 clr-yellow align-center fz-12">+20.6M</span>
+                        </div>
+                        <span class="diag-front absolute-bottom w-100 default" style="height: 70% !important;"></span>
+                        <span class="diag-value absolute-top w-100 clr-white align-center fz-12">133.5M</span>
+                        <span class="diag-type absolute-top w-100 default align-center fz-10 p-3 borad-3">comser</span>
+                    </div>
+                </div>
+            </div>
+            <div class="diagram-detail default w-100 h-100 p-30 ph-10 pb-5 flex-beetwen gap-10" id="monthly-detail">
+                <div class="all-diagram relative w-50 h-100" id="monthly-detail-diagram">
+                    <div class="diagram-bg h-100 w-100 absolute-top absolute-left clr-white fz-12 flex-beetwen flex-column items-start">
+                        <div class="diag-bg-line"><span>100</span></div>
+                        <div class="diag-bg-line"><span>75</span></div>
+                        <div class="diag-bg-line"><span>50</span></div>
+                        <div class="diag-bg-line"><span>25</span></div>
+                        <div class="diag-bg-line no-border"><span>0</span></div>
+                    </div>
+                    <div class="diagram-bar flex-beetwen gap-5 ph-10 h-100 w-100 uppercase">
+                        <div class="diag-bar-box h-100 w-100 relative bolder">
+                            <div class="diag-back absolute-bottom w-100 yellow" style="height: 100% !important;">
+                                <span class="diag-gap w-100 clr-yellow align-center fz-12">☆☆☆</span>
+                            </div>
+                            <span class="diag-front absolute-bottom w-100 default" style="height: 90% !important;"></span>
+                            <span class="diag-value absolute-top w-100 clr-white align-center fz-12">133.5M</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="diagram-text w-100 h-100 borad-10">
+                    <h4 class="m-0 p-0 align-center">Main</h4>
+                    <div class="detail-group">
+                        <span class="detail-head">Target</span>
+                        <div class="detail-content flex-beetwen">
+                            <span class="detail-left fz-14">220.000.000</span>
+                            <span class="detail-right fz-8 align-right">SMTD 90% <br /> 200.000.000</span>
+                        </div>
+                    </div>
+                    <div class="detail-group">
+                        <span class="detail-head">Actual</span>
+                        <div class="detail-content flex-beetwen">
+                            <span class="detail-left fz-14">250.000.000</span>
+                            <span class="detail-right fz-12 align-right">110%</span>
+                        </div>
+                    </div>
+                    <div class="detail-group">
+                        <span class="detail-head">Gap</span>
+                        <div class="detail-content flex-beetwen clr-yellow">
+                            <span class="detail-left fz-14">220.000.000</span>
+                            <span class="detail-right fz-12 align-right">110%</span>
+                        </div>
+                    </div>
+                    <div class="detail-group clr-yellow">
+                        <span class="detail-head">To Achiev</span>
+                        <div class="detail-content flex-beetwen">
+                            <span class="detail-left fz-14">☆☆☆</span>
+                            <span class="detail-right fz-12 align-right">110%</span>
+                        </div>
+                    </div>
+                    <span id="monthly-detail-close" class="white clr-default p-3 m-auto w-100 dis-block fz-10 borad-3 mt-1 align-center">Close</span>
+                </div>
+            </div> 
+        </div>
+        
+        <div class="hr white"></div>
+        
+        <div class="sales-calendar">
+            <div class="calendar-control flex-beetwen mb-2">
+                <i class="fas fa-chevron-left control-left clr-yellow"></i>
+                <span class="calendar-month uppercase bolder clr-white">Mei 2025</span>
+                <i class="fas fa-chevron-right control-right clr-yellow"></i>
+            </div>
+            <div class="calendar-days clr-white bolder fz-12 flex-beetwen align-center mb-2">
+                <span>Sen</span>
+                <span>Sel</span>
+                <span>Rab</span>
+                <span>Kam</span>
+                <span>Jum</span>
+                <span>Sab</span>
+                <span class="clr-red">Min</span>
+            </div>
+            <div class="calendar-date">
+                <div class="week-group" id="week-first" style="width: calc((100% / 7) * 1);">
+                    <div class="date-group">
+                        <div class="date-box fz-9 clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box lightred"></div>
+                                <div class="as-box red"></div>
+                                <div class="as-box darkblue"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date-sales fz-8 w-100 clr-white week-data">
+                        <div class="date-sales-number flex-beetwen">
+                            <span>391.3</span>
+                            <span class="align-right">9.5</span>
+                        </div>
+                        <div class="date-sales-bar w-100 relative hidden">
+                            <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="week-group" style="width: calc((100% / 7) * 7);">
+                    <div class="date-group flex-beetwen gap-2">
+                        <div class="date-box fz-9 today clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box red"></div>
+                                <div class="as-box green"></div>
+                                <div class="as-box blue"></div>
+                            </div>
+                        </div>
+                        <div class="date-box fz-9 clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box purple"></div>
+                                <div class="as-box black"></div>
+                            </div>
+                        </div>
+                        <div class="date-box fz-9 clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box red"></div>
+                                <div class="as-box green"></div>
+                                <div class="as-box blue"></div>
+                                <div class="as-box yellow"></div>
+                                <div class="as-box orange"></div>
+                                <div class="as-box white"></div>
+                                <div class="as-box grey"></div>
+                                <div class="as-box purple"></div>
+                                <div class="as-box black"></div>
+                            </div>
+                        </div>
+                        <div class="date-box fz-9 clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box red"></div>
+                                <div class="as-box green"></div>
+                                <div class="as-box blue"></div>
+                                <div class="as-box yellow"></div>
+                                <div class="as-box orange"></div>
+                                <div class="as-box white"></div>
+                                <div class="as-box grey"></div>
+                                <div class="as-box purple"></div>
+                                <div class="as-box black"></div>
+                            </div>
+                        </div>
+                        <div class="date-box fz-9 clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box red"></div>
+                                <div class="as-box green"></div>
+                                <div class="as-box blue"></div>
+                                <div class="as-box yellow"></div>
+                                <div class="as-box orange"></div>
+                                <div class="as-box white"></div>
+                                <div class="as-box grey"></div>
+                                <div class="as-box purple"></div>
+                                <div class="as-box black"></div>
+                            </div>
+                        </div>
+                        <div class="date-box fz-9 clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box red"></div>
+                                <div class="as-box green"></div>
+                                <div class="as-box blue"></div>
+                                <div class="as-box yellow"></div>
+                                <div class="as-box orange"></div>
+                                <div class="as-box white"></div>
+                                <div class="as-box grey"></div>
+                                <div class="as-box purple"></div>
+                                <div class="as-box black"></div>
+                            </div>
+                        </div>
+                        <div class="date-box fz-9 clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box red"></div>
+                                <div class="as-box green"></div>
+                                <div class="as-box blue"></div>
+                                <div class="as-box yellow"></div>
+                                <div class="as-box orange"></div>
+                                <div class="as-box white"></div>
+                                <div class="as-box grey"></div>
+                                <div class="as-box purple"></div>
+                                <div class="as-box bolack"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date-sales fz-8 w-100 clr-white week-data">
+                        <div class="date-sales-number ph-5 flex-beetwen">
+                            <span>391.3</span>
+                            <span class="align-right">9.5</span>
+                        </div>
+                        <div class="date-sales-bar w-100 relative hidden">
+                            <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="week-group" style="width: calc((100% / 7) * 7);">
+                    <div class="date-group flex-beetwen gap-2">
+                        <div class="date-box fz-9 clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box red"></div>
+                                <div class="as-box green"></div>
+                                <div class="as-box blue"></div>
+                                <div class="as-box yellow"></div>
+                                <div class="as-box orange"></div>
+                                <div class="as-box white"></div>
+                                <div class="as-box grey"></div>
+                                <div class="as-box purple"></div>
+                                <div class="as-box black"></div>
+                            </div>
+                        </div>
+                        <div class="date-box fz-9 clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box red"></div>
+                                <div class="as-box green"></div>
+                                <div class="as-box blue"></div>
+                                <div class="as-box yellow"></div>
+                                <div class="as-box orange"></div>
+                                <div class="as-box white"></div>
+                                <div class="as-box grey"></div>
+                                <div class="as-box purple"></div>
+                                <div class="as-box black"></div>
+                            </div>
+                        </div>
+                        <div class="date-box fz-9 clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box red"></div>
+                                <div class="as-box green"></div>
+                                <div class="as-box blue"></div>
+                                <div class="as-box yellow"></div>
+                                <div class="as-box orange"></div>
+                                <div class="as-box white"></div>
+                                <div class="as-box grey"></div>
+                                <div class="as-box purple"></div>
+                                <div class="as-box black"></div>
+                            </div>
+                        </div>
+                        <div class="date-box fz-9 clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box red"></div>
+                                <div class="as-box green"></div>
+                                <div class="as-box blue"></div>
+                                <div class="as-box yellow"></div>
+                                <div class="as-box orange"></div>
+                                <div class="as-box white"></div>
+                                <div class="as-box grey"></div>
+                                <div class="as-box purple"></div>
+                                <div class="as-box black"></div>
+                            </div>
+                        </div>
+                        <div class="date-box fz-9 clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box red"></div>
+                                <div class="as-box green"></div>
+                                <div class="as-box blue"></div>
+                                <div class="as-box yellow"></div>
+                                <div class="as-box orange"></div>
+                                <div class="as-box white"></div>
+                                <div class="as-box grey"></div>
+                                <div class="as-box purple"></div>
+                                <div class="as-box black"></div>
+                            </div>
+                        </div>
+                        <div class="date-box fz-9 clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box red"></div>
+                                <div class="as-box green"></div>
+                                <div class="as-box blue"></div>
+                                <div class="as-box yellow"></div>
+                                <div class="as-box orange"></div>
+                                <div class="as-box white"></div>
+                                <div class="as-box grey"></div>
+                                <div class="as-box purple"></div>
+                                <div class="as-box black"></div>
+                            </div>
+                        </div>
+                        <div class="date-box fz-9 clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box red"></div>
+                                <div class="as-box green"></div>
+                                <div class="as-box blue"></div>
+                                <div class="as-box yellow"></div>
+                                <div class="as-box orange"></div>
+                                <div class="as-box white"></div>
+                                <div class="as-box grey"></div>
+                                <div class="as-box purple"></div>
+                                <div class="as-box bolack"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date-sales fz-8 w-100 clr-white week-data">
+                        <div class="date-sales-number ph-5 flex-beetwen">
+                            <span>391.3</span>
+                            <span class="align-right">9.5</span>
+                        </div>
+                        <div class="date-sales-bar w-100 relative hidden">
+                            <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="week-group" style="width: calc((100% / 7) * 7);">
+                    <div class="date-group flex-beetwen gap-2">
+                        <div class="date-box fz-9 clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box red"></div>
+                                <div class="as-box green"></div>
+                                <div class="as-box blue"></div>
+                                <div class="as-box yellow"></div>
+                                <div class="as-box orange"></div>
+                                <div class="as-box white"></div>
+                                <div class="as-box grey"></div>
+                                <div class="as-box purple"></div>
+                                <div class="as-box black"></div>
+                            </div>
+                        </div>
+                        <div class="date-box fz-9 clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box red"></div>
+                                <div class="as-box green"></div>
+                                <div class="as-box blue"></div>
+                                <div class="as-box yellow"></div>
+                                <div class="as-box orange"></div>
+                                <div class="as-box white"></div>
+                                <div class="as-box grey"></div>
+                                <div class="as-box purple"></div>
+                                <div class="as-box black"></div>
+                            </div>
+                        </div>
+                        <div class="date-box fz-9 clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box red"></div>
+                                <div class="as-box green"></div>
+                                <div class="as-box blue"></div>
+                                <div class="as-box yellow"></div>
+                                <div class="as-box orange"></div>
+                                <div class="as-box white"></div>
+                                <div class="as-box grey"></div>
+                                <div class="as-box purple"></div>
+                                <div class="as-box black"></div>
+                            </div>
+                        </div>
+                        <div class="date-box fz-9 clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box red"></div>
+                                <div class="as-box green"></div>
+                                <div class="as-box blue"></div>
+                                <div class="as-box yellow"></div>
+                                <div class="as-box orange"></div>
+                                <div class="as-box white"></div>
+                                <div class="as-box grey"></div>
+                                <div class="as-box purple"></div>
+                                <div class="as-box black"></div>
+                            </div>
+                        </div>
+                        <div class="date-box fz-9 clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box red"></div>
+                                <div class="as-box green"></div>
+                                <div class="as-box blue"></div>
+                                <div class="as-box yellow"></div>
+                                <div class="as-box orange"></div>
+                                <div class="as-box white"></div>
+                                <div class="as-box grey"></div>
+                                <div class="as-box purple"></div>
+                                <div class="as-box black"></div>
+                            </div>
+                        </div>
+                        <div class="date-box fz-9 clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box red"></div>
+                                <div class="as-box green"></div>
+                                <div class="as-box blue"></div>
+                                <div class="as-box yellow"></div>
+                                <div class="as-box orange"></div>
+                                <div class="as-box white"></div>
+                                <div class="as-box grey"></div>
+                                <div class="as-box purple"></div>
+                                <div class="as-box black"></div>
+                            </div>
+                        </div>
+                        <div class="date-box fz-9 clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box red"></div>
+                                <div class="as-box green"></div>
+                                <div class="as-box blue"></div>
+                                <div class="as-box yellow"></div>
+                                <div class="as-box orange"></div>
+                                <div class="as-box white"></div>
+                                <div class="as-box grey"></div>
+                                <div class="as-box purple"></div>
+                                <div class="as-box bolack"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date-sales fz-8 w-100 clr-white week-data">
+                        <div class="date-sales-number ph-5 flex-beetwen">
+                            <span>391.3</span>
+                            <span class="align-right">9.5</span>
+                        </div>
+                        <div class="date-sales-bar w-100 relative hidden">
+                            <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="week-group" id="week-last" style="width: calc((100% / 7) * 2);">
+                    <div class="date-group flex-beetwen gap-2">
+                        <div class="date-box fz-9 clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box red"></div>
+                                <div class="as-box green"></div>
+                                <div class="as-box blue"></div>
+                                <div class="as-box yellow"></div>
+                                <div class="as-box orange"></div>
+                                <div class="as-box white"></div>
+                                <div class="as-box grey"></div>
+                                <div class="as-box purple"></div>
+                                <div class="as-box black"></div>
+                            </div>
+                        </div>
+                        <div class="date-box fz-9 clr-white">
+                            <div class="date-top flex-beetwen">
+                                <span>01</span>
+                                <span class="align-right">A0003</span>
+                            </div>
+                            <div class="date-sales">
+                                <div class="date-sales-number flex-beetwen">
+                                    <span>391.3</span>
+                                    <span class="align-right">9.5</span>
+                                </div>
+                                <div class="date-sales-bar w-100 relative hidden">
+                                    <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                                </div>
+                            </div>
+                            <div class="date-as">
+                                <div class="as-box red"></div>
+                                <div class="as-box green"></div>
+                                <div class="as-box blue"></div>
+                                <div class="as-box yellow"></div>
+                                <div class="as-box orange"></div>
+                                <div class="as-box white"></div>
+                                <div class="as-box grey"></div>
+                                <div class="as-box purple"></div>
+                                <div class="as-box black"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date-sales fz-8 w-100 clr-white week-data">
+                        <div class="date-sales-number ph-5 flex-beetwen">
+                            <span>391.3</span>
+                            <span class="align-right">9.5</span>
+                        </div>
+                        <div class="date-sales-bar w-100 relative hidden">
+                            <div class="date-sales-bar-ctlr white w-100 h-100 absolute-top" style="right: 60% !important;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="calendar-note p-5 clr-white mt-2">
+                <i class="fas fa-question"></i>
+            </div>
+        </div>
+        
+        <div class="hr white"></div>
+        
+        <h3 class="clr-white">Dept. Sales</h3>
+        <div class="dept-data clr-white relative hidden">
+            <div class="dept-list flex-center gap-10 flex-wrap">
+                
+                <div class="dept-box grid-center default"><span>A</span></div>
+                <div class="dept-box grid-center grey"><span>AB</span></div>
+                <div class="dept-box grid-center green"><span>AC</span></div>
+                <div class="dept-box grid-center default"><span>AF</span></div>
+                <div class="dept-box grid-center grey"><span>AD</span></div>
+                <div class="dept-box grid-center blue"><span>AE</span></div>
+                <div class="dept-box grid-center default"><span>AH</span></div>
+                <div class="dept-box grid-center grey"><span>AJ</span></div>
+                <div class="dept-box grid-center green"><span>AK</span></div>
+                <div class="dept-box grid-center default"><span>A</span></div>
+                <div class="dept-box grid-center grey"><span>AB</span></div>
+                <div class="dept-box grid-center green"><span>AC</span></div>
+                <div class="dept-box grid-center default"><span>AF</span></div>
+                <div class="dept-box grid-center grey"><span>AD</span></div>
+                <div class="dept-box grid-center blue"><span>AE</span></div>
+                <div class="dept-box grid-center default"><span>AH</span></div>
+                <div class="dept-box grid-center grey"><span>AJ</span></div>
+                <div class="dept-box grid-center green"><span>AK</span></div>
+                <div class="dept-box grid-center default"><span>A</span></div>
+                <div class="dept-box grid-center grey"><span>AB</span></div>
+                <div class="dept-box grid-center green"><span>AC</span></div>
+                <div class="dept-box grid-center default"><span>AF</span></div>
+                <div class="dept-box grid-center grey"><span>AD</span></div>
+                <div class="dept-box grid-center blue"><span>AE</span></div>
+                <div class="dept-box grid-center default"><span>AH</span></div>
+                <div class="dept-box grid-center grey"><span>AJ</span></div>
+                <div class="dept-box grid-center green"><span>AK</span></div>
+            </div>
+            <div class="dept-color-note mt-2 p-5 fz-10 bolder flex-start gap-20">
+                <div class="dept-color-group flex-start gap-5">
+                    <div class="color-box green"></div>
+                    <span class="color-type clr-green">Achiev - 4</span>
+                </div>
+                <div class="dept-color-group flex-start gap-5">
+                    <div class="color-box blue"></div>
+                    <span class="color-type clr-blue">> SMTD - 4</span>
+                </div>
+                <div class="dept-color-group flex-start gap-5">
+                    <div class="color-box default"></div>
+                    <span class="color-type clr-default">< SMTD - 4</span>
+                </div>
+                <div class="dept-color-group flex-start gap-5">
+                    <div class="color-box grey"></div>
+                    <span class="color-type clr-grey">Zonk - 4</span>
+                </div>
+            </div>
+            <div class="diagram-detail dept-detail default w-100 h-100 p-25 pb-2 flex-beetwen gap-10" id="dept-detail">
+                <div class="all-diagram relative w-50 h-100" id="dept-detail-diagram">
+                    <div class="diagram-bg h-100 w-100 absolute-top absolute-left clr-white fz-12 flex-beetwen flex-column items-start">
+                        <div class="diag-bg-line"><span>100</span></div>
+                        <div class="diag-bg-line"><span>75</span></div>
+                        <div class="diag-bg-line"><span>50</span></div>
+                        <div class="diag-bg-line"><span>25</span></div>
+                        <div class="diag-bg-line no-border"><span>0</span></div>
+                    </div>
+                    <div class="diagram-bar flex-beetwen gap-5 ph-10 h-100 w-100 uppercase">
+                        <div class="diag-bar-box h-100 w-100 relative bolder">
+                            <div class="diag-back absolute-bottom w-100 yellow" style="height: 100% !important;">
+                                <span class="diag-gap w-100 clr-yellow align-center fz-12">☆☆☆</span>
+                            </div>
+                            <span class="diag-front absolute-bottom w-100 default" style="height: 90% !important;"></span>
+                            <span class="diag-value absolute-top w-100 clr-white align-center fz-12">133.5M</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="diagram-text w-100 h-100 borad-10 scroll fz-12">
+                    <h4 class="m-0 p-0 align-center">Main</h4>
+                    <div class="detail-group">
+                        <span class="detail-head">Target</span>
+                        <div class="detail-content flex-beetwen">
+                            <span class="detail-left">220.000.000</span>
+                            <span class="detail-right fz-8 align-right">SMTD 90% <br /> 200.000.000</span>
+                        </div>
+                    </div>
+                    <div class="detail-group">
+                        <span class="detail-head">Actual</span>
+                        <div class="detail-content flex-beetwen">
+                            <span class="detail-left">250.000.000</span>
+                            <span class="detail-right align-right">110%</span>
+                        </div>
+                    </div>
+                    <div class="detail-group">
+                        <span class="detail-head">Gap</span>
+                        <div class="detail-content flex-beetwen clr-yellow">
+                            <span class="detail-left">220.000.000</span>
+                            <span class="detail-right align-right">110%</span>
+                        </div>
+                    </div>
+                    <div class="detail-group clr-yellow">
+                        <span class="detail-head">To Achiev</span>
+                        <div class="detail-content flex-beetwen">
+                            <span class="detail-left">☆☆☆</span>
+                            <span class="detail-right align-right">110%</span>
+                        </div>
+                    </div>
+                    <span id="dept-detail-close" class="white clr-default p-3 m-auto w-100 dis-block fz-10 borad-3 mt-1 align-center">Close</span>
+                </div>
+            </div> 
+        </div>
+        
+        <div class="hr white"></div>
+        
+    </div>
+    
+    <div class="date-detail dis-none clr-white" id="date-detail">
+        <div class="date-detail-bx align-center p-15 relative">
+            <i class="fas fa-arrow-left absolute-top absolute-left fz-18 clr-yellow p-10" id="date-detail-close"></i>
+            <h4 class="m-0 p-5">Date Detail</h4>
+            <h3 class="m-0 p-5">Kamis, 05 Juni 2025</h3>
+            <div class="hr white"></div>
+            <h4>Sales Digaram</h4>
+            <div class="diagram-box relative hidden borad-10 pb-5 pt-3 w-100 vh-50">
+                <i class="diagram-control fas fa-cog fa-spin clr-yellow absolute-right absolute-top" data-target="daily-diagram"></i>
+                <div class="all-diagram pl-20 relative w-100 h-100" id="daily-diagram">
+                    <div class="diagram-bg h-100 w-100 absolute-top clr-white fz-12 flex-beetwen flex-column items-start">
+                        <div class="diag-bg-line"><span>100</span></div>
+                        <div class="diag-bg-line"><span>75</span></div>
+                        <div class="diag-bg-line"><span>50</span></div>
+                        <div class="diag-bg-line"><span>25</span></div>
+                        <div class="diag-bg-line no-border"><span>0</span></div>
+                    </div>
+                    <div class="diagram-bar flex-beetwen gap-5 ph-10 h-100 w-100 uppercase">
+                        <div class="diag-bar-box h-100 w-100 relative bolder" data-bar="main">
+                            <div class="diag-back absolute-bottom w-100 yellow" style="height: 90% !important;">
+                                <span class="diag-gap w-100 clr-yellow align-center fz-12">+20.6M</span>
+                            </div>
+                            <span class="diag-front absolute-bottom w-100 default" style="height: 70% !important;"></span>
+                            <span class="diag-value absolute-top w-100 clr-white align-center fz-12">133.5M</span>
+                            <span class="diag-type absolute-top w-100 default align-center fz-10 p-3 borad-3">MAIN</span>
+                        </div>
+                        <div class="diag-bar-box h-100 w-100 relative bolder" data-bar="ftr">
+                            <div class="diag-back absolute-bottom w-100 yellow" style="height: 90% !important;">
+                                <span class="diag-gap w-100 clr-yellow align-center fz-12">+20.6M</span>
+                            </div>
+                            <span class="diag-front absolute-bottom w-100 default" style="height: 70% !important;"></span>
+                            <span class="diag-value absolute-top w-100 clr-white align-center fz-12">133.5M</span>
+                            <span class="diag-type absolute-top w-100 default align-center fz-10 p-3 borad-3">FTR</span>
+                        </div>
+                        <div class="diag-bar-box h-100 w-100 relative bolder" data-bar="acc">
+                            <div class="diag-back absolute-bottom w-100 yellow" style="height: 90% !important;">
+                                <span class="diag-gap w-100 clr-yellow align-center fz-12">+20.6M</span>
+                            </div>
+                            <span class="diag-front absolute-bottom w-100 default" style="height: 70% !important;"></span>
+                            <span class="diag-value absolute-top w-100 clr-white align-center fz-12">133.5M</span>
+                            <span class="diag-type absolute-top w-100 default align-center fz-10 p-3 borad-3">ACC</span>
+                        </div>
+                        <div class="diag-bar-box h-100 w-100 relative bolder dis-none" data-bar="fpvalue">
+                            <div class="diag-back absolute-bottom w-100 yellow" style="height: 90% !important;">
+                                <span class="diag-gap w-100 clr-yellow align-center fz-12">+20.6M</span>
+                            </div>
+                            <span class="diag-front absolute-bottom w-100 default" style="height: 70% !important;"></span>
+                            <span class="diag-value absolute-top w-100 clr-white align-center fz-12">133.5M</span>
+                            <span class="diag-type absolute-top w-100 default align-center fz-10 p-3 borad-3">FP</span>
+                        </div>
+                        <div class="diag-bar-box h-100 w-100 relative bolder" data-bar="fpqty">
+                            <div class="diag-back absolute-bottom w-100 yellow" style="height: 90% !important;">
+                                <span class="diag-gap w-100 clr-yellow align-center fz-12">+20.6M</span>
+                            </div>
+                            <span class="diag-front absolute-bottom w-100 default" style="height: 70% !important;"></span>
+                            <span class="diag-value absolute-top w-100 clr-white align-center fz-12">133.5M</span>
+                            <span class="diag-type absolute-top w-100 default align-center fz-10 p-3 borad-3">comser</span>
+                        </div>
+                        <div class="diag-bar-box h-100 w-100 relative bolder" data-bar="comservalue">
+                            <div class="diag-back absolute-bottom w-100 yellow" style="height: 90% !important;">
+                                <span class="diag-gap w-100 clr-yellow align-center fz-12">+20.6M</span>
+                            </div>
+                            <span class="diag-front absolute-bottom w-100 default" style="height: 70% !important;"></span>
+                            <span class="diag-value absolute-top w-100 clr-white align-center fz-12">133.5M</span>
+                            <span class="diag-type absolute-top w-100 default align-center fz-10 p-3 borad-3">FP</span>
+                        </div>
+                        <div class="diag-bar-box h-100 w-100 relative bolder dis-none" data-bar="comserqty">
+                            <div class="diag-back absolute-bottom w-100 yellow" style="height: 90% !important;">
+                                <span class="diag-gap w-100 clr-yellow align-center fz-12">+20.6M</span>
+                            </div>
+                            <span class="diag-front absolute-bottom w-100 default" style="height: 70% !important;"></span>
+                            <span class="diag-value absolute-top w-100 clr-white align-center fz-12">133.5M</span>
+                            <span class="diag-type absolute-top w-100 default align-center fz-10 p-3 borad-3">comser</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="diagram-detail default w-100 h-100 pt-3 ph-10 pl-20 pb-2 flex-beetwen gap-10" id="daily-detail">
+                    <div class="all-diagram relative w-50 h-100" id="monthly-detail-diagram">
+                        <div class="diagram-bg h-100 w-100 absolute-top absolute-left clr-white fz-12 flex-beetwen flex-column items-start">
+                            <div class="diag-bg-line"><span>100</span></div>
+                            <div class="diag-bg-line"><span>75</span></div>
+                            <div class="diag-bg-line"><span>50</span></div>
+                            <div class="diag-bg-line"><span>25</span></div>
+                            <div class="diag-bg-line no-border"><span>0</span></div>
+                        </div>
+                        <div class="diagram-bar flex-beetwen gap-5 ph-10 h-100 w-100 uppercase align-center">
+                            <div class="diag-bar-box h-100 w-100 relative bolder">
+                                <div class="diag-back absolute-bottom w-100 yellow" style="height: 100% !important;">
+                                    <span class="diag-gap w-100 clr-yellow align-center fz-12">☆☆☆</span>
+                                </div>
+                                <span class="diag-front absolute-bottom w-100 default" style="height: 90% !important;"></span>
+                                <span class="diag-value absolute-top w-100 clr-white align-center fz-12">133.5M</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="diagram-text w-100 h-100 borad-10">
+                        <h4 class="m-0 p-0 align-center">Main</h4>
+                        <div class="detail-group">
+                            <span class="detail-head">Target</span>
+                            <div class="detail-content flex-beetwen">
+                                <span class="detail-left fz-14">220.000.000</span>
+                                <span class="detail-right fz-8 align-right">SMTD 90% <br /> 200.000.000</span>
+                            </div>
+                        </div>
+                        <div class="detail-group">
+                            <span class="detail-head">Actual</span>
+                            <div class="detail-content flex-beetwen">
+                                <span class="detail-left fz-14">250.000.000</span>
+                                <span class="detail-right fz-12 align-right">110%</span>
+                            </div>
+                        </div>
+                        <div class="detail-group">
+                            <span class="detail-head">Gap</span>
+                            <div class="detail-content flex-beetwen clr-yellow">
+                                <span class="detail-left fz-14">220.000.000</span>
+                                <span class="detail-right fz-12 align-right">110%</span>
+                            </div>
+                        </div>
+                        <div class="detail-group clr-yellow">
+                            <span class="detail-head">To Achiev</span>
+                            <div class="detail-content flex-beetwen">
+                                <span class="detail-left fz-14">☆☆☆</span>
+                                <span class="detail-right fz-12 align-right">110%</span>
+                            </div>
+                        </div>
+                        <span id="daily-detail-close" class="white clr-default p-5 m-auto w-100 dis-block fz-14 borad-3 mt-2 align-center">Close</span>
+                    </div>
+                </div> 
+            </div>
+            <div class="hr white"></div>
+            <h4>After Sales Progress</h4>
+            <div class="flex-center gap-10 vw-50 m-auto mb-1">
+                <div class="date-as-box red"></div>
+                <div class="date-as-box blue"></div>
+                <div class="date-as-box green"></div>
+                <div class="date-as-box yellow"></div>
+                <div class="date-as-box orange"></div>
+                <div class="date-as-box purple"></div>
+                <div class="date-as-box black"></div>
+                
+            </div>
+            <div class="as-date mt-3">
+                <div class="date-as-group align-left br-red">
+                    <div class="as-head mb-1 clr-red">Delivery to Customer</div>
+                    <div class="as-data">
+                        <div class="as-text hidden w-100">UG8.1.20250601.3 - Customer Name...</div>
+                        <div class="as-text hidden w-100">UG8.1.20250601.3 - Customer Name...</div>
+                        <div class="as-text hidden w-100">UG8.1.20250601.3 - Customer Name...</div>
+                        <div class="as-text hidden w-100">UG8.1.20250601.3 - Customer Name...</div>
+                    </div>
+                </div>
+                <div class="date-as-group align-left br-green">
+                    <div class="as-head mb-1 clr-green">NDC Prepare</div>
+                    <div class="as-data">
+                        <div class="as-text hidden w-100">UG8.1.20250601.3 - Customer Name...</div>
+                        <div class="as-text hidden w-100">UG8.1.20250601.3 - Customer Name...</div>
+                        <div class="as-text hidden w-100">UG8.1.20250601.3 - Customer Name...</div>
+                        <div class="as-text hidden w-100">UG8.1.20250601.3 - Customer Name...</div>
+                    </div>
+                </div>
+                <div class="date-as-group align-left br-blue">
+                    <div class="as-head mb-1 clr-blue">Ready Store</div>
+                    <div class="as-data">
+                        <div class="as-text hidden w-100">UG8.1.20250601.3 - Customer Name...</div>
+                        <div class="as-text hidden w-100">UG8.1.20250601.3 - Customer Name...</div>
+                        <div class="as-text hidden w-100">UG8.1.20250601.3 - Customer Name...</div>
+                        <div class="as-text hidden w-100">UG8.1.20250601.3 - Customer Name...</div>
+                    </div>
+                </div>
+                <div class="date-as-group align-left br-yellow">
+                    <div class="as-head mb-1 clr-yellow">Instal Customer</div>
+                    <div class="as-data">
+                        <div class="as-text hidden w-100">UG8.1.20250601.3 - Customer Name...</div>
+                        <div class="as-text hidden w-100">UG8.1.20250601.3 - Customer Name...</div>
+                        <div class="as-text hidden w-100">UG8.1.20250601.3 - Customer Name...</div>
+                        <div class="as-text hidden w-100">UG8.1.20250601.3 - Customer Name...</div>
+                    </div>
+                </div>
+                <div class="date-as-group align-left br-black">
+                    <div class="as-head mb-1 clr-black">Lewat</div>
+                    <div class="as-data">
+                        <div class="as-text hidden w-100">UG8.1.20250601.3 - Customer Name...</div>
+                        <div class="as-text hidden w-100">UG8.1.20250601.3 - Customer Name...</div>
+                        <div class="as-text hidden w-100">UG8.1.20250601.3 - Customer Name...</div>
+                        <div class="as-text hidden w-100">UG8.1.20250601.3 - Customer Name...</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hr white"></div>
+            <h4>Dept Sales</h4>
+            <div class="fz-14 mb-1">3 Dept _ 7 Reciept _ 20 SKU _ 40 QTY - 79.560.010</div>
+            <div class="date-dept">
+                <div class="dept-group">
+                    <div class="dept-head flex-beetwen pv-5 bolder">
+                        <span class="fz-18">A - Living Up-holstered</span>
+                        <span class="fz-14">20.159.000 (2)</span>
+                    </div>
+                    <div class="dept-table w-100 scroll">
+                        <div class="dept-table-box fz-12">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>reciept</th>
+                                        <th>sku</th>
+                                        <th>item</th>
+                                        <th>dept</th>
+                                        <th>qty</th>
+                                        <th>price</th>
+                                        <th>sp</th>
+                                        <th>disc</th>
+                                        <th>total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>R001</td>
+                                        <td>SKU001</td>
+                                        <td>Item A</td>
+                                        <td>Dept 1</td>
+                                        <td>10</td>
+                                        <td>10000</td>
+                                        <td>12000</td>
+                                        <td>5%</td>
+                                        <td>114000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>R002</td>
+                                        <td>SKU002</td>
+                                        <td>Item B</td>
+                                        <td>Dept 2</td>
+                                        <td>5</td>
+                                        <td>15000</td>
+                                        <td>17000</td>
+                                        <td>10%</td>
+                                        <td>76500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>R003</td>
+                                        <td>SKU003</td>
+                                        <td>Item C</td>
+                                        <td>Dept 3</td>
+                                        <td>7</td>
+                                        <td>12000</td>
+                                        <td>14000</td>
+                                        <td>7%</td>
+                                        <td>91140</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>R004</td>
+                                        <td>SKU004</td>
+                                        <td>Item D</td>
+                                        <td>Dept 1</td>
+                                        <td>3</td>
+                                        <td>18000</td>
+                                        <td>20000</td>
+                                        <td>3%</td>
+                                        <td>58200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>R005</td>
+                                        <td>SKU005</td>
+                                        <td>Item E</td>
+                                        <td>Dept 4</td>
+                                        <td>12</td>
+                                        <td>8000</td>
+                                        <td>9500</td>
+                                        <td>8%</td>
+                                        <td>105120</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>R006</td>
+                                        <td>SKU006</td>
+                                        <td>Item F</td>
+                                        <td>Dept 2</td>
+                                        <td>9</td>
+                                        <td>9500</td>
+                                        <td>11000</td>
+                                        <td>4%</td>
+                                        <td>95040</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>R007</td>
+                                        <td>SKU007</td>
+                                        <td>Item G</td>
+                                        <td>Dept 3</td>
+                                        <td>4</td>
+                                        <td>20000</td>
+                                        <td>22000</td>
+                                        <td>5%</td>
+                                        <td>83600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>R008</td>
+                                        <td>SKU008</td>
+                                        <td>Item H</td>
+                                        <td>Dept 4</td>
+                                        <td>6</td>
+                                        <td>15000</td>
+                                        <td>16500</td>
+                                        <td>2%</td>
+                                        <td>97020</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>R009</td>
+                                        <td>SKU009</td>
+                                        <td>Item I</td>
+                                        <td>Dept 1</td>
+                                        <td>8</td>
+                                        <td>13000</td>
+                                        <td>15000</td>
+                                        <td>6%</td>
+                                        <td>112800</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>R010</td>
+                                        <td>SKU010</td>
+                                        <td>Item J</td>
+                                        <td>Dept 2</td>
+                                        <td>15</td>
+                                        <td>7000</td>
+                                        <td>8000</td>
+                                        <td>5%</td>
+                                        <td>114000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>R011</td>
+                                        <td>SKU011</td>
+                                        <td>Item K</td>
+                                        <td>Dept 3</td>
+                                        <td>2</td>
+                                        <td>25000</td>
+                                        <td>27000</td>
+                                        <td>7%</td>
+                                        <td>50100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>R012</td>
+                                        <td>SKU012</td>
+                                        <td>Item L</td>
+                                        <td>Dept 4</td>
+                                        <td>11</td>
+                                        <td>8500</td>
+                                        <td>9500</td>
+                                        <td>9%</td>
+                                        <td>95195</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>R013</td>
+                                        <td>SKU013</td>
+                                        <td>Item M</td>
+                                        <td>Dept 1</td>
+                                        <td>13</td>
+                                        <td>9000</td>
+                                        <td>10500</td>
+                                        <td>5%</td>
+                                        <td>129675</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>R014</td>
+                                        <td>SKU014</td>
+                                        <td>Item N</td>
+                                        <td>Dept 2</td>
+                                        <td>1</td>
+                                        <td>30000</td>
+                                        <td>32000</td>
+                                        <td>2%</td>
+                                        <td>31360</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td>R015</td>
+                                        <td>SKU015</td>
+                                        <td>Item O</td>
+                                        <td>Dept 3</td>
+                                        <td>6</td>
+                                        <td>14000</td>
+                                        <td>16000</td>
+                                        <td>6%</td>
+                                        <td>90240</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16</td>
+                                        <td>R016</td>
+                                        <td>SKU016</td>
+                                        <td>Item P</td>
+                                        <td>Dept 4</td>
+                                        <td>9</td>
+                                        <td>10000</td>
+                                        <td>11500</td>
+                                        <td>4%</td>
+                                        <td>99360</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>R017</td>
+                                        <td>SKU017</td>
+                                        <td>Item Q</td>
+                                        <td>Dept 1</td>
+                                        <td>8</td>
+                                        <td>11000</td>
+                                        <td>12500</td>
+                                        <td>3%</td>
+                                        <td>97000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>18</td>
+                                        <td>R018</td>
+                                        <td>SKU018</td>
+                                        <td>Item R</td>
+                                        <td>Dept 2</td>
+                                        <td>7</td>
+                                        <td>12000</td>
+                                        <td>14000</td>
+                                        <td>5%</td>
+                                        <td>93100</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="dept-group">
+                    <div class="dept-head flex-beetwen pv-5 bolder">
+                        <span class="fz-18">A - Living Up-holstered</span>
+                        <span class="fz-14">20.159.000 (2)</span>
+                    </div>
+                    <div class="dept-table w-100 scroll">
+                        <div class="dept-table-box fz-12">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>reciept</th>
+                                        <th>sku</th>
+                                        <th>item</th>
+                                        <th>dept</th>
+                                        <th>qty</th>
+                                        <th>price</th>
+                                        <th>sp</th>
+                                        <th>disc</th>
+                                        <th>total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>R001</td>
+                                        <td>SKU001</td>
+                                        <td>Item A</td>
+                                        <td>Dept 1</td>
+                                        <td>10</td>
+                                        <td>10000</td>
+                                        <td>12000</td>
+                                        <td>5%</td>
+                                        <td>114000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>R002</td>
+                                        <td>SKU002</td>
+                                        <td>Item B</td>
+                                        <td>Dept 2</td>
+                                        <td>5</td>
+                                        <td>15000</td>
+                                        <td>17000</td>
+                                        <td>10%</td>
+                                        <td>76500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>R003</td>
+                                        <td>SKU003</td>
+                                        <td>Item C</td>
+                                        <td>Dept 3</td>
+                                        <td>7</td>
+                                        <td>12000</td>
+                                        <td>14000</td>
+                                        <td>7%</td>
+                                        <td>91140</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>R004</td>
+                                        <td>SKU004</td>
+                                        <td>Item D</td>
+                                        <td>Dept 1</td>
+                                        <td>3</td>
+                                        <td>18000</td>
+                                        <td>20000</td>
+                                        <td>3%</td>
+                                        <td>58200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>R005</td>
+                                        <td>SKU005</td>
+                                        <td>Item E</td>
+                                        <td>Dept 4</td>
+                                        <td>12</td>
+                                        <td>8000</td>
+                                        <td>9500</td>
+                                        <td>8%</td>
+                                        <td>105120</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>R006</td>
+                                        <td>SKU006</td>
+                                        <td>Item F</td>
+                                        <td>Dept 2</td>
+                                        <td>9</td>
+                                        <td>9500</td>
+                                        <td>11000</td>
+                                        <td>4%</td>
+                                        <td>95040</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>R007</td>
+                                        <td>SKU007</td>
+                                        <td>Item G</td>
+                                        <td>Dept 3</td>
+                                        <td>4</td>
+                                        <td>20000</td>
+                                        <td>22000</td>
+                                        <td>5%</td>
+                                        <td>83600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>R008</td>
+                                        <td>SKU008</td>
+                                        <td>Item H</td>
+                                        <td>Dept 4</td>
+                                        <td>6</td>
+                                        <td>15000</td>
+                                        <td>16500</td>
+                                        <td>2%</td>
+                                        <td>97020</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>R009</td>
+                                        <td>SKU009</td>
+                                        <td>Item I</td>
+                                        <td>Dept 1</td>
+                                        <td>8</td>
+                                        <td>13000</td>
+                                        <td>15000</td>
+                                        <td>6%</td>
+                                        <td>112800</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>R010</td>
+                                        <td>SKU010</td>
+                                        <td>Item J</td>
+                                        <td>Dept 2</td>
+                                        <td>15</td>
+                                        <td>7000</td>
+                                        <td>8000</td>
+                                        <td>5%</td>
+                                        <td>114000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>R011</td>
+                                        <td>SKU011</td>
+                                        <td>Item K</td>
+                                        <td>Dept 3</td>
+                                        <td>2</td>
+                                        <td>25000</td>
+                                        <td>27000</td>
+                                        <td>7%</td>
+                                        <td>50100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>R012</td>
+                                        <td>SKU012</td>
+                                        <td>Item L</td>
+                                        <td>Dept 4</td>
+                                        <td>11</td>
+                                        <td>8500</td>
+                                        <td>9500</td>
+                                        <td>9%</td>
+                                        <td>95195</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>R013</td>
+                                        <td>SKU013</td>
+                                        <td>Item M</td>
+                                        <td>Dept 1</td>
+                                        <td>13</td>
+                                        <td>9000</td>
+                                        <td>10500</td>
+                                        <td>5%</td>
+                                        <td>129675</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>R014</td>
+                                        <td>SKU014</td>
+                                        <td>Item N</td>
+                                        <td>Dept 2</td>
+                                        <td>1</td>
+                                        <td>30000</td>
+                                        <td>32000</td>
+                                        <td>2%</td>
+                                        <td>31360</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td>R015</td>
+                                        <td>SKU015</td>
+                                        <td>Item O</td>
+                                        <td>Dept 3</td>
+                                        <td>6</td>
+                                        <td>14000</td>
+                                        <td>16000</td>
+                                        <td>6%</td>
+                                        <td>90240</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16</td>
+                                        <td>R016</td>
+                                        <td>SKU016</td>
+                                        <td>Item P</td>
+                                        <td>Dept 4</td>
+                                        <td>9</td>
+                                        <td>10000</td>
+                                        <td>11500</td>
+                                        <td>4%</td>
+                                        <td>99360</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>R017</td>
+                                        <td>SKU017</td>
+                                        <td>Item Q</td>
+                                        <td>Dept 1</td>
+                                        <td>8</td>
+                                        <td>11000</td>
+                                        <td>12500</td>
+                                        <td>3%</td>
+                                        <td>97000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>18</td>
+                                        <td>R018</td>
+                                        <td>SKU018</td>
+                                        <td>Item R</td>
+                                        <td>Dept 2</td>
+                                        <td>7</td>
+                                        <td>12000</td>
+                                        <td>14000</td>
+                                        <td>5%</td>
+                                        <td>93100</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="dept-group">
+                    <div class="dept-head flex-beetwen pv-5 bolder">
+                        <span class="fz-18">A - Living Up-holstered</span>
+                        <span class="fz-14">20.159.000 (2)</span>
+                    </div>
+                    <div class="dept-table w-100 scroll">
+                        <div class="dept-table-box fz-12">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>reciept</th>
+                                        <th>sku</th>
+                                        <th>item</th>
+                                        <th>dept</th>
+                                        <th>qty</th>
+                                        <th>price</th>
+                                        <th>sp</th>
+                                        <th>disc</th>
+                                        <th>total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>R001</td>
+                                        <td>SKU001</td>
+                                        <td>Item A</td>
+                                        <td>Dept 1</td>
+                                        <td>10</td>
+                                        <td>10000</td>
+                                        <td>12000</td>
+                                        <td>5%</td>
+                                        <td>114000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>R002</td>
+                                        <td>SKU002</td>
+                                        <td>Item B</td>
+                                        <td>Dept 2</td>
+                                        <td>5</td>
+                                        <td>15000</td>
+                                        <td>17000</td>
+                                        <td>10%</td>
+                                        <td>76500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>R003</td>
+                                        <td>SKU003</td>
+                                        <td>Item C</td>
+                                        <td>Dept 3</td>
+                                        <td>7</td>
+                                        <td>12000</td>
+                                        <td>14000</td>
+                                        <td>7%</td>
+                                        <td>91140</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>R004</td>
+                                        <td>SKU004</td>
+                                        <td>Item D</td>
+                                        <td>Dept 1</td>
+                                        <td>3</td>
+                                        <td>18000</td>
+                                        <td>20000</td>
+                                        <td>3%</td>
+                                        <td>58200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>R005</td>
+                                        <td>SKU005</td>
+                                        <td>Item E</td>
+                                        <td>Dept 4</td>
+                                        <td>12</td>
+                                        <td>8000</td>
+                                        <td>9500</td>
+                                        <td>8%</td>
+                                        <td>105120</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>R006</td>
+                                        <td>SKU006</td>
+                                        <td>Item F</td>
+                                        <td>Dept 2</td>
+                                        <td>9</td>
+                                        <td>9500</td>
+                                        <td>11000</td>
+                                        <td>4%</td>
+                                        <td>95040</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>R007</td>
+                                        <td>SKU007</td>
+                                        <td>Item G</td>
+                                        <td>Dept 3</td>
+                                        <td>4</td>
+                                        <td>20000</td>
+                                        <td>22000</td>
+                                        <td>5%</td>
+                                        <td>83600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>R008</td>
+                                        <td>SKU008</td>
+                                        <td>Item H</td>
+                                        <td>Dept 4</td>
+                                        <td>6</td>
+                                        <td>15000</td>
+                                        <td>16500</td>
+                                        <td>2%</td>
+                                        <td>97020</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>R009</td>
+                                        <td>SKU009</td>
+                                        <td>Item I</td>
+                                        <td>Dept 1</td>
+                                        <td>8</td>
+                                        <td>13000</td>
+                                        <td>15000</td>
+                                        <td>6%</td>
+                                        <td>112800</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>R010</td>
+                                        <td>SKU010</td>
+                                        <td>Item J</td>
+                                        <td>Dept 2</td>
+                                        <td>15</td>
+                                        <td>7000</td>
+                                        <td>8000</td>
+                                        <td>5%</td>
+                                        <td>114000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>R011</td>
+                                        <td>SKU011</td>
+                                        <td>Item K</td>
+                                        <td>Dept 3</td>
+                                        <td>2</td>
+                                        <td>25000</td>
+                                        <td>27000</td>
+                                        <td>7%</td>
+                                        <td>50100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>R012</td>
+                                        <td>SKU012</td>
+                                        <td>Item L</td>
+                                        <td>Dept 4</td>
+                                        <td>11</td>
+                                        <td>8500</td>
+                                        <td>9500</td>
+                                        <td>9%</td>
+                                        <td>95195</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>R013</td>
+                                        <td>SKU013</td>
+                                        <td>Item M</td>
+                                        <td>Dept 1</td>
+                                        <td>13</td>
+                                        <td>9000</td>
+                                        <td>10500</td>
+                                        <td>5%</td>
+                                        <td>129675</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>R014</td>
+                                        <td>SKU014</td>
+                                        <td>Item N</td>
+                                        <td>Dept 2</td>
+                                        <td>1</td>
+                                        <td>30000</td>
+                                        <td>32000</td>
+                                        <td>2%</td>
+                                        <td>31360</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td>R015</td>
+                                        <td>SKU015</td>
+                                        <td>Item O</td>
+                                        <td>Dept 3</td>
+                                        <td>6</td>
+                                        <td>14000</td>
+                                        <td>16000</td>
+                                        <td>6%</td>
+                                        <td>90240</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16</td>
+                                        <td>R016</td>
+                                        <td>SKU016</td>
+                                        <td>Item P</td>
+                                        <td>Dept 4</td>
+                                        <td>9</td>
+                                        <td>10000</td>
+                                        <td>11500</td>
+                                        <td>4%</td>
+                                        <td>99360</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>R017</td>
+                                        <td>SKU017</td>
+                                        <td>Item Q</td>
+                                        <td>Dept 1</td>
+                                        <td>8</td>
+                                        <td>11000</td>
+                                        <td>12500</td>
+                                        <td>3%</td>
+                                        <td>97000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>18</td>
+                                        <td>R018</td>
+                                        <td>SKU018</td>
+                                        <td>Item R</td>
+                                        <td>Dept 2</td>
+                                        <td>7</td>
+                                        <td>12000</td>
+                                        <td>14000</td>
+                                        <td>5%</td>
+                                        <td>93100</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="date-detail dis-none clr-white" id="week-detail">
+        <div class="date-detail-bx align-center p-15 relative">
+            <i class="fas fa-arrow-left absolute-top absolute-left fz-18 clr-yellow p-10" id="week-detail-close"></i>
+            <h4 class="m-0 p-5">Week Detail</h4>
+            <h3 class="m-0 p-5">Week 02</h3>
+            <div class="hr white"></div>
+            <h4>Sales Digaram</h4>
+            <div class="diagram-box relative hidden borad-10 pb-5 pt-3 w-100 vh-40">
+                <div class="diagram-detail  w-100 h-100 pt-3 ph-10 pl-20 pb-2 flex-beetwen active gap-10" id="weekly-detail">
+                    <div class="all-diagram relative w-50 h-100" id="weekly-detail-diagram">
+                        <div class="diagram-bg h-100 w-100 absolute-top absolute-left clr-white fz-12 flex-beetwen flex-column items-start">
+                            <div class="diag-bg-line"><span>100</span></div>
+                            <div class="diag-bg-line"><span>75</span></div>
+                            <div class="diag-bg-line"><span>50</span></div>
+                            <div class="diag-bg-line"><span>25</span></div>
+                            <div class="diag-bg-line no-border"><span>0</span></div>
+                        </div>
+                        <div class="diagram-bar flex-beetwen gap-5 ph-10 h-100 w-100 uppercase align-center">
+                            <div class="diag-bar-box h-100 w-100 relative bolder">
+                                <div class="diag-back absolute-bottom w-100 yellow" style="height: 100% !important;">
+                                    <span class="diag-gap w-100 clr-yellow align-center fz-12">☆☆☆</span>
+                                </div>
+                                <span class="diag-front absolute-bottom w-100 default" style="height: 90% !important;"></span>
+                                <span class="diag-value absolute-top w-100 clr-white align-center fz-12">133.5M</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="diagram-text w-100 h-100 borad-10 fz-12 scroll">
+                        <h4 class="m-0 p-0 align-center fz-18">Main</h4>
+                        <div class="detail-group">
+                            <span class="detail-head">Target</span>
+                            <div class="detail-content flex-beetwen">
+                                <span class="detail-left fz-12">220.000.000</span>
+                                <span class="detail-right fz-8 align-right">SMTD 90% <br /> 200.000.000</span>
+                            </div>
+                        </div>
+                        <div class="detail-group">
+                            <span class="detail-head">Actual</span>
+                            <div class="detail-content flex-beetwen">
+                                <span class="detail-left fz-12">250.000.000</span>
+                                <span class="detail-right fz-12 align-right">110%</span>
+                            </div>
+                        </div>
+                        <div class="detail-group">
+                            <span class="detail-head">Gap</span>
+                            <div class="detail-content flex-beetwen clr-yellow">
+                                <span class="detail-left fz-12">220.000.000</span>
+                                <span class="detail-right fz-12 align-right">110%</span>
+                            </div>
+                        </div>
+                        <div class="detail-group clr-yellow">
+                            <span class="detail-head">To Achiev</span>
+                            <div class="detail-content flex-beetwen">
+                                <span class="detail-left fz-12">☆☆☆</span>
+                                <span class="detail-right fz-12 align-right">110%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="hr white"></div>
+            <h4>Sales Detail</h4>
+            <div class="week-sales-detail fz-14">
+                <div class="week-sales-group flex-beetwen">
+                    <span>Furniture</span>
+                    <span>20.678.010</span>
+                </div>
+                <div class="week-sales-group flex-beetwen">
+                    <span>Accessories</span>
+                    <span>20.678.010</span>
+                </div>
+                <div class="week-sales-group flex-beetwen">
+                    <span>FP</span>
+                    <span>207.000 - 2 (7%)</span>
+                </div>
+                <div class="week-sales-group flex-beetwen">
+                    <span>Comser</span>
+                    <span>379.010 (4)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="diagram-controler">
+        <div class="controller-box">
+            
+        </div>
+    </div>
+    
+    <div id="add" class="content dis-none ">add</div>
+    
+    <div id="sales-card" class="content dis-none ">
+        <h3 class="align-center uppercase clr-white">SalesCard</h3>
+        <div class="hr white"></div>
+        <div class="sc-data-box relative p-10 clr-white">
+             <div class="flex-center w-100 mb-2">
+                 <div class="add-group w-50 m-auto">
+                    <input type="text" id="sc-text-search" class=""/>
+                    <i class="fas fa-search"> </i>
+                </div>
+            </div>
+            <div class="flex-beetwen gap-5">
+                <div class="add-group">
+                    <label>start date</label>
+                    <input type="date" id="sc-date-start"/>
+                </div>-
+                <div class="add-group">
+                    <label>end date</label>
+                    <input type="date" id="sc-date-end"/>
+                </div>
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="dept-table w-100 scroll">
+                        <div class="dept-table-box fz-12">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>reciept</th>
+                                        <th>sku</th>
+                                        <th>item</th>
+                                        <th>dept</th>
+                                        <th>qty</th>
+                                        <th>price</th>
+                                        <th>sp</th>
+                                        <th>disc</th>
+                                        <th>total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>R001</td>
+                                        <td>SKU001</td>
+                                        <td>Item A</td>
+                                        <td>Dept 1</td>
+                                        <td>10</td>
+                                        <td>10000</td>
+                                        <td>12000</td>
+                                        <td>5%</td>
+                                        <td>114000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>R002</td>
+                                        <td>SKU002</td>
+                                        <td>Item B</td>
+                                        <td>Dept 2</td>
+                                        <td>5</td>
+                                        <td>15000</td>
+                                        <td>17000</td>
+                                        <td>10%</td>
+                                        <td>76500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>R003</td>
+                                        <td>SKU003</td>
+                                        <td>Item C</td>
+                                        <td>Dept 3</td>
+                                        <td>7</td>
+                                        <td>12000</td>
+                                        <td>14000</td>
+                                        <td>7%</td>
+                                        <td>91140</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>R004</td>
+                                        <td>SKU004</td>
+                                        <td>Item D</td>
+                                        <td>Dept 1</td>
+                                        <td>3</td>
+                                        <td>18000</td>
+                                        <td>20000</td>
+                                        <td>3%</td>
+                                        <td>58200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>R005</td>
+                                        <td>SKU005</td>
+                                        <td>Item E</td>
+                                        <td>Dept 4</td>
+                                        <td>12</td>
+                                        <td>8000</td>
+                                        <td>9500</td>
+                                        <td>8%</td>
+                                        <td>105120</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>R006</td>
+                                        <td>SKU006</td>
+                                        <td>Item F</td>
+                                        <td>Dept 2</td>
+                                        <td>9</td>
+                                        <td>9500</td>
+                                        <td>11000</td>
+                                        <td>4%</td>
+                                        <td>95040</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>R007</td>
+                                        <td>SKU007</td>
+                                        <td>Item G</td>
+                                        <td>Dept 3</td>
+                                        <td>4</td>
+                                        <td>20000</td>
+                                        <td>22000</td>
+                                        <td>5%</td>
+                                        <td>83600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>R008</td>
+                                        <td>SKU008</td>
+                                        <td>Item H</td>
+                                        <td>Dept 4</td>
+                                        <td>6</td>
+                                        <td>15000</td>
+                                        <td>16500</td>
+                                        <td>2%</td>
+                                        <td>97020</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>R009</td>
+                                        <td>SKU009</td>
+                                        <td>Item I</td>
+                                        <td>Dept 1</td>
+                                        <td>8</td>
+                                        <td>13000</td>
+                                        <td>15000</td>
+                                        <td>6%</td>
+                                        <td>112800</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>R010</td>
+                                        <td>SKU010</td>
+                                        <td>Item J</td>
+                                        <td>Dept 2</td>
+                                        <td>15</td>
+                                        <td>7000</td>
+                                        <td>8000</td>
+                                        <td>5%</td>
+                                        <td>114000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>R011</td>
+                                        <td>SKU011</td>
+                                        <td>Item K</td>
+                                        <td>Dept 3</td>
+                                        <td>2</td>
+                                        <td>25000</td>
+                                        <td>27000</td>
+                                        <td>7%</td>
+                                        <td>50100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>R012</td>
+                                        <td>SKU012</td>
+                                        <td>Item L</td>
+                                        <td>Dept 4</td>
+                                        <td>11</td>
+                                        <td>8500</td>
+                                        <td>9500</td>
+                                        <td>9%</td>
+                                        <td>95195</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>R013</td>
+                                        <td>SKU013</td>
+                                        <td>Item M</td>
+                                        <td>Dept 1</td>
+                                        <td>13</td>
+                                        <td>9000</td>
+                                        <td>10500</td>
+                                        <td>5%</td>
+                                        <td>129675</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>R014</td>
+                                        <td>SKU014</td>
+                                        <td>Item N</td>
+                                        <td>Dept 2</td>
+                                        <td>1</td>
+                                        <td>30000</td>
+                                        <td>32000</td>
+                                        <td>2%</td>
+                                        <td>31360</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td>R015</td>
+                                        <td>SKU015</td>
+                                        <td>Item O</td>
+                                        <td>Dept 3</td>
+                                        <td>6</td>
+                                        <td>14000</td>
+                                        <td>16000</td>
+                                        <td>6%</td>
+                                        <td>90240</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16</td>
+                                        <td>R016</td>
+                                        <td>SKU016</td>
+                                        <td>Item P</td>
+                                        <td>Dept 4</td>
+                                        <td>9</td>
+                                        <td>10000</td>
+                                        <td>11500</td>
+                                        <td>4%</td>
+                                        <td>99360</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>R017</td>
+                                        <td>SKU017</td>
+                                        <td>Item Q</td>
+                                        <td>Dept 1</td>
+                                        <td>8</td>
+                                        <td>11000</td>
+                                        <td>12500</td>
+                                        <td>3%</td>
+                                        <td>97000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>18</td>
+                                        <td>R018</td>
+                                        <td>SKU018</td>
+                                        <td>Item R</td>
+                                        <td>Dept 2</td>
+                                        <td>7</td>
+                                        <td>12000</td>
+                                        <td>14000</td>
+                                        <td>5%</td>
+                                        <td>93100</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+        </div>
+    </div>
+    
+    <div id="after-sales" class="content dis-none =">as</div>
+    
+    <div id="settings" class="content dis-none p-10">
+        <h3 class="w-100 clr-white align-center">SETTINGS</h3>
+        <div class="hr white"></div>
+        <div class="sales-calendar">
+            <h4 class="clr-white">Schedule Settings</h4>
+            <div class="calendar-control flex-beetwen mb-2">
+                <i class="fas fa-chevron-left control-left clr-yellow"></i>
+                <span class="calendar-month uppercase bolder clr-white">Mei 2025</span>
+                <i class="fas fa-chevron-right control-right clr-yellow"></i>
+            </div>
+            <div class="calendar-days clr-white bolder fz-12 flex-beetwen align-center mb-2">
+                <span>Sen</span>
+                <span>Sel</span>
+                <span>Rab</span>
+                <span>Kam</span>
+                <span>Jum</span>
+                <span>Sab</span>
+                <span class="clr-red">Min</span>
+            </div>
+            <div class="schedule-calendar relative">
+                <span></span>
+                <span></span>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+                <div class="sch-box fz-12">
+                    <span class="align-center clr-white mb-1">01</span>
+                    <input type="text" class="sch-input fz-8" maxlength="6"/>
+                </div>
+            </div>
+            <div class="sch-button flex-center gap-10 align-center mt-1">
+                <div class="sch-reset w-100 borad-3">reset</div>
+                <div class="sch-save w-100 borad-3">save</div>
+            </div>
+        </div>
+        <div class="hr white"></div>
+        <div class="basic-target p-10 default pt-0">
+            <h4 class="clr-white pt-2">Sales Target Settings</h4>
+            <div class="add-group clr-white">
+                <label for="">Main Target</label>
+                <div class="flex-start gap-10">
+                    <input type="text" id="main-target"/>
+                    <i class="fas fa-question"></i>
+                </div>
+            </div>
+            <div class="flex-beetwen gap-5">
+                <div class="add-group clr-white">
+                    <label for="">Furniture Target</label>
+                    <div class="flex-start gap-5">
+                        <input type="text" id="furniture-target"/>
+                    </div>
+                </div>
+                <div class="add-group clr-white">
+                    <label for="">Accessories Target</label>
+                    <div class="flex-start gap-5">
+                        <input type="text" id="accessories-target"/>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-beetwen gap-5">
+                <div class="add-group clr-white">
+                    <label for="">FP Qty Target</label>
+                    <div class="flex-start gap-5">
+                        <input type="text" id="fpqty-target"/>
+                    </div>
+                </div>
+                <div class="add-group clr-white">
+                    <label for="">FP Value Target</label>
+                    <div class="flex-start gap-5">
+                        <input type="text" id="fpvalue-target"/>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-beetwen gap-5">
+                <div class="add-group clr-white">
+                    <label for="">Cuci AC Qty Target</label>
+                    <div class="flex-start gap-5">
+                        <input type="text" id="cuciacqty-target"/>
+                    </div>
+                </div>
+                <div class="add-group clr-white">
+                    <label for="">Cuci AC Value Target</label>
+                    <div class="flex-start gap-5">
+                        <input type="text" id="cuciacvalue-target"/>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-center gap-10 pt-2 align-center target-button">
+                <span class="w-30" id="sales-target-save">Save</span>
+                <span class="w-30" id="sales-target-reset">Reset</span>
+            </div>
+        </div>
+        <div class="basic-target p-10 default pt-0">
+            <h4 class="clr-white pt-2">Dept Target Settings</h4>
+            <div id="dept-target-list">
+            <div class="add-group flex- clr-white">
+                <label>Living Up-holstered</label>
+                <input type="text"/>
+                <span><b>A</b></span>
+            </div>
+            <div class="add-group flex- clr-white">
+                <label>Living Up-holstered</label>
+                <input type="text"/>
+                <span><b>A</b></span>
+            </div>
+            <div class="add-group flex- clr-white">
+                <label>Living Up-holstered</label>
+                <input type="text"/>
+                <span><b>A</b></span>
+            </div>
+            <div class="add-group flex- clr-white">
+                <label>Living Up-holstered</label>
+                <input type="text"/>
+                <span><b>A</b></span>
+            </div>
+            <div class="add-group flex- clr-white">
+                <label>Living Up-holstered</label>
+                <input type="text"/>
+                <span><b>A</b></span>
+            </div>
+            <div class="add-group flex- clr-white">
+                <label>Living Up-holstered</label>
+                <input type="text"/>
+                <span><b>A</b></span>
+            </div>
+            <div class="add-group flex- clr-white">
+                <label>Living Up-holstered</label>
+                <input type="text"/>
+                <span><b>A</b></span>
+            </div>
+            <div class="add-group flex- clr-white">
+                <label>Living Up-holstered</label>
+                <input type="text"/>
+                <span><b>A</b></span>
+            </div>
+            <div class="add-group flex- clr-white">
+                <label>Living Up-holstered</label>
+                <input type="text"/>
+                <span><b>A</b></span>
+            </div>
+            <div class="add-group flex- clr-white">
+                <label>Living Up-holstered</label>
+                <input type="text"/>
+                <span><b>A</b></span>
+            </div>
+            <div class="add-group flex- clr-white">
+                <label>Living Up-holstered</label>
+                <input type="text"/>
+                <span><b>A</b></span>
+            </div>
+            <div class="add-group flex- clr-white">
+                <label>Living Up-holstered</label>
+                <input type="text"/>
+                <span><b>A</b></span>
+            </div>
+            <div class="add-group flex- clr-white">
+                <label>Living Up-holstered</label>
+                <input type="text"/>
+                <span><b>A</b></span>
+            </div>
+            <div class="add-group flex- clr-white">
+                <label>Living Up-holstered</label>
+                <input type="text"/>
+                <span><b>A</b></span>
+            </div>
+            <div class="add-group flex- clr-white">
+                <label>Living Up-holstered</label>
+                <input type="text"/>
+                <span><b>A</b></span>
+            </div>
+            <div class="add-group flex- clr-white">
+                <label>Living Up-holstered</label>
+                <input type="text"/>
+                <span><b>A</b></span>
+            </div>
+            <div class="add-group flex- clr-white">
+                <label>Living Up-holstered</label>
+                <input type="text"/>
+                <span><b>A</b></span>
+            </div>
+            <div class="add-group flex- clr-white">
+                <label>Living Up-holstered</label>
+                <input type="text"/>
+                <span><b>A</b></span>
+            </div>
+            </div>
+            <div class="flex-center gap-10 pt-2 align-center target-button">
+                <span class="w-30" id="dept-target-save">Save</span>
+                <span class="w-30" id="dept-target-reset">Reset</span>
+            </div>
+        </div>
+        <div class="hr white"></div>
+    </div>
+  
+  
+    <div class="vh-100 dis-none"></div>
+  
+  
+    
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
