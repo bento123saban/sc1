@@ -1,1 +1,2 @@
-const ben = "Ben"
+const ben = "Ben",
+  next = 'nex'
